@@ -1,0 +1,40 @@
+.about-section {
+    padding-top: 90px;
+
+    @media(max-width: $breakpoint768) {
+        padding-top: 50px;
+    }
+}
+
+.faces-section {
+    padding-top: 90px;
+
+    @media(max-width: $breakpoint768) {
+        padding-top: 50px;
+    }
+}
+
+.news-section {
+    padding-top: 90px;
+
+    @media(max-width: $breakpoint768) {
+        padding-top: 50px;
+    }
+}
+
+.bottom-section {
+    padding: 90px 0 140px;
+
+    background-image: url(../assets/img/bg/bottom-bg.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+
+    @media(max-width: $breakpoint992) {
+        padding: 50px 0 0 0;
+        background-image: none;
+    }
+}
+
+.banner-section {
+    
+}

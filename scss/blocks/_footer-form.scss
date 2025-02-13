@@ -1,0 +1,69 @@
+.footer-form {
+    width: 100%;
+    max-width: 545px;
+
+    @media(max-width: $breakpoint992) {
+        margin-top: 24px;
+        order: 2;
+    }
+    @media(max-width: $breakpoint768) {
+        max-width: 380px;
+    }
+
+    &__inner {
+        container: footer-form / inline-size;
+    }
+
+    &__wrapper {
+        padding: 32px 24px;
+        border: 1px solid #fff;
+        border-radius: $main-radius;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-image: url(../assets/img/bg/form-bg.png);
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+
+        @media(max-width: $breakpoint768) {
+            padding: 22px;
+        }
+
+        @container footer-form (max-width: 450px) {
+            padding: 22px;
+            background-size: contain;
+            
+            & .footer-form__title {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__title {
+        font-family: $font-roboto;
+        font-weight: 400;
+        font-size: 24px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+
+        @media(max-width: $breakpoint768) {
+            font-size: 16px !important;
+        }
+    }
+    &__link {
+        margin-top: 24px;
+        padding: 16px 52px;
+        width: fit-content;
+
+        @media(max-width: $breakpoint768) {
+            margin-top: 20px;
+        }
+        @media(max-width: $breakpoint375) {
+            font-size: 14px;
+            padding: 14px 32px;
+        }
+    }
+}

@@ -1,33 +1,184 @@
 .header {
-    position: relative;
-    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
-    &__wrapper {
+    width: 100%;
+    z-index: 2;
+
+    &--light {
+        $light-color: #fff;
+
+        & .header {
+            &__link {
+                color: $light-color;
+
+                & svg {
+                    fill: $light-color;
+                }
+            }
+            &__top {
+                &-vision svg {
+                    fill: $light-color;
+                }
+            }
+            &__wrapper {
+                border: 1px solid rgba(255, 255, 255, 0.23);
+                background: rgba(255, 255, 255, 0.17);
+                backdrop-filter: blur(23px);
+            }
+        }
+    }
+
+    &__logo {
+        &-img {
+            @media(max-width: $breakpoint1280) {
+                max-width: 180px;
+            }
+            @media(max-width: $breakpoint375) {
+                max-width: 140px;
+            }
+        }
+    }
+
+    &__inner {
         position: relative;
+    }
+    &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 29px 0;
+        gap: 44px;
+        padding: 22px;
         z-index: 2;
 
-        @media(max-width: $breakpoint768) {
-            padding: 20px 0;
+        border-radius: 30px;
+        background: $main-color;
+
+        @media(max-width: $breakpoint1280) {
+            gap: 20px;
+            padding: 22px 14px;
         }
-        @media(max-width: $breakpoint480) {
-            padding: 16px 0;
+        @media(max-width: $breakpoint1024) {
+            padding: 18px 24px;
+            border-radius: 20px;
         }
     }
 
-    &__contacts {
+    &__top {
         display: flex;
-        flex-direction: column;
-        align-items: end;
-    }
-    &__mail {
+        justify-content: space-between;
+        padding: 20px 0 24px;
 
-    }
-    &__phone {
+        @media(max-width: $breakpoint1024) {
+            display: none;
+        }
 
+        &-info {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        &-vision {
+
+            &--desktop {
+                @media(max-width: $breakpoint1024) {
+                    display: none;
+                }
+            }
+            &--mobile {
+                display: flex;
+                margin-left: auto;
+
+                & svg {
+                    fill: #fff !important;
+                    width: 22px;
+                }
+
+                @media(min-width: $breakpoint1024) {
+                    display: none;
+                }
+            }
+            & svg {
+                fill: #091C5A;
+                transition: fill .3s;
+            }
+
+            &:hover {
+                & svg {
+                    fill: $red;
+                }
+            }
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-family: $font-roboto;
+        font-weight: 600;
+        font-size: 20px;
+        text-decoration: underline !important;
+        color: $main-color;
+        transition: color .3s;
+
+        & svg {
+            fill: #091C5A;
+            transition: fill .3s;
+        }
+
+        &:hover {
+            color: $red;
+
+            & svg {
+                fill: $red;
+            }
+        }
+    }
+
+    &__btn {
+        padding: 9px 28px;
+        white-space: nowrap;
+
+        @media(max-width: $breakpoint1280) {
+            font-size: 14px !important;
+        }
+        @media(max-width: $breakpoint1024) {
+            display: none !important;
+        }
+    }
+
+    &__mobile {
+        display: none;
+        position: absolute;
+        top: calc(100% + 20px);
+        width: 100%;
+
+        @media(max-width: $container-width) {
+            width: calc(100% - 48px);
+        }
+        @media(max-width: $breakpoint768) {
+            width: calc(100% - 32px);
+        }
+
+        &.open {
+            display: flex;
+        }
+    }
+
+    &.open {
+        &::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            height: 100dvh;
+            background: rgba(0, 0, 0, .5);
+            backdrop-filter: blur(2px);
+            z-index: -1;
+        }
     }
 }
 

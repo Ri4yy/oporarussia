@@ -3,11 +3,14 @@
     align-items: center;
     gap: 40px;
 
-    @media(max-width: $breakpoint1280) {
+    @media(max-width: $container-width) {
         gap: 16px;
     }
+    @media(max-width: $breakpoint1280) {
+        gap: 10px;
+    }
     @media(max-width: $breakpoint1024) {
-        gap: 6px;
+        display: none;
     }
 
     &__item {
@@ -15,17 +18,49 @@
     }
 
     &__link {
-        display: block;
-        font-weight: 500;
-        font-size: 18px;
-        color: $main-text;
+        display: inline-block;
+        position: relative;
 
-        @media(max-width: $breakpoint1024) {
-            font-size: 16px;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: justify;
+        color: #fff;
+        position: relative;
+        transition: color .25s ease;
+
+        @media(max-width: $breakpoint1280) {
+            font-size: 14px;
         }
 
         &--active {
-            color: $main-color;
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 100% !important;
+                height: 1px;
+                background: #fff;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: #fff;
+            transition: width .25s ease-out;
+        }
+
+        &:hover {
+            &::before {
+                width: 100%;
+                left: 0;
+                right: 0;
+            }
         }
     }
 }

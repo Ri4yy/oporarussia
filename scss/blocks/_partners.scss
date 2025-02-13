@@ -1,0 +1,46 @@
+.partners {
+
+    &__inner {
+        margin-top: 70px;
+
+        @media(max-width: $breakpoint768) {
+            margin-top: 25px;
+        }
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+
+        @media(max-width: $breakpoint768) {
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 8px;
+        }
+        @media(max-width: $breakpoint768) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    &__item {
+        border-radius: $main-radius;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+        background: #fff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 130px;
+
+        @media(max-width: $breakpoint768) {
+            min-height: 75px;
+        }
+
+        & img {
+            @media(max-width: $breakpoint768) {
+                max-width: 120px;
+            }
+            @media(max-width: $breakpoint480) {
+                max-width: 100px;
+            }
+        }
+    }
+}

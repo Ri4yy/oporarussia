@@ -2,7 +2,7 @@
 
 html,
 body {
-    font-family: '';
+    font-family: $font-montserrat;
     scroll-behavior: smooth;
 }
 
@@ -11,7 +11,17 @@ h1 {
     color: $main-color;
 }
 h2 {
-    color: $main-color;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: justify;
+    color: #000;
+
+    @media(max-width: $breakpoint768) {
+        font-size: 20px;
+    }
+    @media(max-width: $breakpoint480) {
+        font-size: 16px;
+    }
 }
 h3 {
     color: $main-text;

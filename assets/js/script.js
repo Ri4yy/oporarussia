@@ -1,9 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let menu = document.querySelector('.menu'),
-    btnMenu = document.querySelector('.btn-menu');
+    let headerMobile = document.querySelector('.header__mobile'),
+        header = document.querySelector('.header'),
+        html = document.querySelector('html'),
+        btnMenu = document.querySelector('.btn-menu');
 
     btnMenu.addEventListener('click', (e) => {
-        menu.classList.toggle('menu--open')
+        headerMobile.classList.toggle('open')
+        header.classList.toggle('open')
+        html.classList.toggle('no-scroll')
 
         btnMenu.classList.toggle('btn-menu--open')
     })
@@ -11,8 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function resize() {
         let width = window.innerWidth;
 
-        if (width > 768) {
-            menu.classList.remove('menu--open')
+        if (width > 1024) {
+            headerMobile.classList.remove('open')
+            header.classList.remove('open')
+            html.classList.remove('no-scroll')
             btnMenu.classList.remove('btn-menu--open')
         } else {
             return
@@ -23,4 +29,25 @@ document.addEventListener('DOMContentLoaded', () => {
         resize()
     })
     resize()
+
+
+    const aboutContainer = document.querySelector('.about__inner');
+    const aboutBtnMore = document.querySelector('#about-more');
+    let aboutBtnToggle = false;
+
+    if(aboutBtnMore) {
+        aboutBtnMore.addEventListener('click', () => {
+            if(aboutBtnToggle) {
+                aboutContainer.classList.remove('open')
+                aboutBtnMore.textContent = 'подробнее';
+                aboutBtnToggle = false;
+            } else {
+                aboutContainer.classList.add('open')
+                aboutBtnMore.textContent = 'скрыть';
+                aboutBtnToggle = true;
+            }
+        })
+    }
+
+
 })

@@ -1,0 +1,110 @@
+.faces {
+
+    &__inner {
+        margin-top: 28px;
+
+        @media(max-width: $breakpoint768) {
+            margin-top: 25px;
+        }
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+
+        @media(max-width: $breakpoint768) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        @media(max-width: $breakpoint480) {
+            gap: 4px;
+        }
+    }
+    &__item {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        background: $main-color;
+        border-radius: $main-radius;
+
+        min-height: 300px;
+        padding: 0 4px;
+
+        @media(max-width: $breakpoint768) {
+            min-height: 240px;
+        }
+        @media(max-width: $breakpoint480) {
+            min-height: 180px;
+        }
+        @media(max-width: $breakpoint375) {
+            min-height: 150px;
+        }
+
+        &:hover {
+            &::after {
+                background-image: url(../assets/img/bg/faces-active-bg.svg);
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url(../assets/img/bg/faces-bg.svg);
+            background-repeat: no-repeat;
+            background-position: 100% 50%;
+            width: 197px;
+            height: 277px;
+            background-size: contain;
+            pointer-events: none;
+            transition: all .3s;
+
+            @media(max-width: $breakpoint768) {
+                width: 115px;
+                height: 162px;
+            }
+
+          
+        }
+    }
+    &__text {
+        font-family: $font-roboto;
+        font-weight: 600;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        z-index: 2;
+
+        @media(max-width: $breakpoint768) {
+            font-size: 16px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 14px;
+        }
+    }
+    &__link {
+        display: block;
+        margin-top: 24px;
+
+        font-weight: 400;
+        font-size: 16px;
+        text-decoration: underline !important;
+        text-align: center;
+        color: #fff;
+        z-index: 2;
+
+        @media(max-width: $breakpoint768) {
+            font-size: 14px;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-top: 14px;
+            font-size: 12px;
+        }
+    }
+}

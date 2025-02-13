@@ -1,0 +1,12 @@
+.social-list {
+    display: flex;
+    gap: 18px;
+
+    &__item, &__link {
+        display: flex;
+
+        & img {
+            height: fit-content;
+        }
+    }
+}

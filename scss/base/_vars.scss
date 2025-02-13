@@ -1,25 +1,30 @@
 // color
-$main-color: #548235;
+$main-color: #091C5A;
+$red: #FF0000;
+
 $accent-color: #D4E1BD;
 $secondary-color: #11332A; 
 $main-text: #3A3737;
 
 // breakpoint 
-$breakpoint1440: 1440 + px;
+$breakpoint1340: 1340 + px;
 $breakpoint1280: 1280 + px;
 $breakpoint1024: 1024 + px;
+$breakpoint992: 992 + px;
 $breakpoint768: 768 + px;
+$breakpoint600: 600 + px;
 $breakpoint480: 480 + px;
 $breakpoint375: 375 + px;
 
 // font-family
-$font-family: '';
+$font-montserrat: "Montserrat", serif;
+$font-roboto: "Roboto", serif;
 
 // border-radius
-$main-radius: 35px;
+$main-radius: 10px;
 
 // container
-$container-width: 1440px;
+$container-width: 1340px;
 $section-top: 100px;
 $padding-md: 24px;
 $padding-sm: 16px;
