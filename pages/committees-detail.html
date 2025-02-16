@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница комитета</title>
+
+    <script src="https://lidrekon.ru/slep/js/jquery.js"></script>
+    <script src="https://lidrekon.ru/slep/js/uhpv-full.min.js"></script>
+
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <div class="header__top">
+                <a href="mailto:" class="header__link">
+                    <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 5.58594V13.71C0 14.4633 0.299273 15.1858 0.831983 15.7185C1.36469 16.2513 2.0872 16.5505 2.84057 16.5505H17.0434C17.7968 16.5505 18.5193 16.2513 19.052 15.7185C19.5847 15.1858 19.884 14.4633 19.884 13.71V5.58594L11.4304 10.787C10.9828 11.0624 10.4676 11.2082 9.94199 11.2082C9.41642 11.2082 8.90116 11.0624 8.45353 10.787L0 5.58594Z" />
+                        <path d="M19.884 3.91791V3.7683C19.884 3.01494 19.5847 2.29243 19.052 1.75972C18.5193 1.22701 17.7968 0.927734 17.0434 0.927734H2.84057C2.0872 0.927734 1.36469 1.22701 0.831983 1.75972C0.299273 2.29243 0 3.01494 0 3.7683V3.91791L9.19776 9.57821C9.42158 9.71591 9.67921 9.78881 9.94199 9.78881C10.2048 9.78881 10.4624 9.71591 10.6862 9.57821L19.884 3.91791Z" />
+                    </svg>    
+                    Oporaru21@gmail.com
+                </a>
+                <div class="header__top-info">
+                    <button class="header__top-vision header__top-vision--desktop" id="specialButton">
+                        <svg width="34" height="29" viewBox="0 0 34 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.88642 2.41721C8.18094 2.30982 8.42327 2.08518 8.56093 1.79191C8.6986 1.49864 8.72053 1.16035 8.62198 0.850258C8.52343 0.540167 8.31233 0.28323 8.03437 0.135067C7.75642 -0.0130963 7.43397 -0.040564 7.13684 0.0586094L6.25916 0.365244C5.35777 0.680167 4.59079 0.947023 3.98354 1.23874C3.33674 1.54869 2.7706 1.92826 2.32149 2.52495C1.87079 3.12165 1.64781 3.78464 1.50707 4.51394C1.37581 5.20179 1.30307 6.0438 1.21767 7.03663L0.113861 19.7496C0.0400701 20.2002 0.00198661 20.6565 0 21.1137C0.00790698 25.4546 3.36837 29 7.51163 29C9.29463 29.0003 11.0196 28.3359 12.3781 27.1255C13.7366 25.9151 14.64 24.2377 14.9268 22.3933L15.2731 22.264C16.3899 21.8464 17.6101 21.8464 18.7269 22.264L19.0748 22.3933C19.3615 24.2374 20.2647 25.9146 21.6229 27.125C22.981 28.3353 24.7056 28.9999 26.4884 29C30.6316 29 33.9905 25.453 34 21.1137C34 20.6485 33.9615 20.1938 33.8846 19.7496L32.7823 7.03829C32.6969 6.0438 32.6242 5.20345 32.4929 4.51725C32.3522 3.7863 32.1292 3.12165 31.6785 2.52661C31.2278 1.93157 30.6633 1.54869 30.0165 1.2404C29.4092 0.94868 28.6438 0.681824 27.7408 0.366902L26.8632 0.0602667C26.566 -0.0389067 26.2436 -0.0114389 25.9656 0.136724C25.6877 0.284887 25.4766 0.541824 25.378 0.851915C25.2795 1.16201 25.3014 1.5003 25.4391 1.79357C25.5767 2.08684 25.8191 2.31148 26.1136 2.41887L26.9327 2.70396C27.9085 3.0454 28.5521 3.27248 29.0297 3.50121C29.482 3.71668 29.6844 3.89072 29.8204 4.06973C29.9548 4.24708 30.0687 4.49405 30.1667 5.00455C30.2695 5.54489 30.3327 6.25264 30.426 7.32669L31.0823 14.8998C30.0583 14.0699 28.8471 13.5314 27.5662 13.3366C26.2852 13.1418 24.9779 13.2972 23.7711 13.7878C22.5643 14.2784 21.499 15.0875 20.6784 16.1367C19.8577 17.1859 19.3097 18.4396 19.0874 19.7761C17.7238 19.3626 16.2762 19.3626 14.9126 19.7761C14.6903 18.4396 14.1423 17.1859 13.3216 16.1367C12.501 15.0875 11.4357 14.2784 10.2289 13.7878C9.02209 13.2972 7.71482 13.1418 6.43384 13.3366C5.15287 13.5314 3.94166 14.0699 2.91767 14.8998L2.99358 14.018L3.57395 7.32669C3.66726 6.25264 3.73051 5.54489 3.8333 5.00621C3.93135 4.49405 4.04521 4.24708 4.18121 4.06973C4.31563 3.89072 4.51805 3.71834 4.97033 3.50121C5.44791 3.27248 6.09153 3.0454 7.06726 2.70562L7.88642 2.41721Z" />
+                        </svg>
+                    </button>
+                    <a href="tel:" class="header__link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.9778 8.65556C14.3778 11.8 11.8 14.3778 8.65555 15.9778L6.21111 13.5333C5.9 13.2222 5.46667 13.1333 5.07778 13.2556C3.83333 13.6667 2.5 13.8889 1.11111 13.8889C0.816425 13.8889 0.53381 14.006 0.325436 14.2143C0.117062 14.4227 0 14.7053 0 15V18.8889C0 19.1836 0.117062 19.4662 0.325436 19.6746C0.53381 19.8829 0.816425 20 1.11111 20C6.12076 20 10.9252 18.0099 14.4676 14.4676C18.0099 10.9252 20 6.12076 20 1.11111C20 0.816426 19.8829 0.533811 19.6746 0.325437C19.4662 0.117063 19.1836 0 18.8889 0H15C14.7053 0 14.4227 0.117063 14.2143 0.325437C14.006 0.533811 13.8889 0.816426 13.8889 1.11111C13.8889 2.5 13.6667 3.83333 13.2556 5.07778C13.1333 5.46667 13.2222 5.9 13.5333 6.21111L15.9778 8.65556Z" />
+                        </svg>
+                        +7 937 019 58 58
+                    </a>
+                    <ul class="social-list">
+                        <li class="social-list__item">
+                            <a href="" class="social-list__link">
+                                <img src="assets/img/icons/i-tg.png" alt="">
+                            </a>
+                        </li>
+                        <li class="social-list-item">
+                            <a href="" class="social-list__link">
+                                <img src="assets/img/icons/i-vk.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__wrapper">
+                <a href="../index.html" class="header__logo">
+                    <img src="../assets/img/icons/header-logo.svg" class="header__logo-img" alt="">
+                </a>
+                <nav class="menu">
+                    <ul class="menu-nav">
+                        <li class="menu-nav__item">
+                            <a href="" class="menu-nav__link menu-nav__link--active">Главная</a>
+                        </li>
+                        <li class="menu-nav__item">
+                            <a href="" class="menu-nav__link">Об ОПОРЕ</a>
+                        </li>
+                        <li class="menu-nav__item">
+                            <a href="" class="menu-nav__link">Комитеты и комиссии</a>
+                        </li>
+                        <li class="menu-nav__item">
+                            <a href="" class="menu-nav__link">Проекты</a>
+                        </li>
+                        <li class="menu-nav__item">
+                            <a href="" class="menu-nav__link">Анонсы</a>
+                        </li>
+                        <li class="menu-nav__item">
+                            <a href="" class="menu-nav__link">Новости</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="" class="btn btn--red header__btn">ВСТУПИТЬ В ОПОРУ</a>
+                <button class="header__top-vision header__top-vision--mobile">
+                    <svg width="34" height="29" viewBox="0 0 34 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.88642 2.41721C8.18094 2.30982 8.42327 2.08518 8.56093 1.79191C8.6986 1.49864 8.72053 1.16035 8.62198 0.850258C8.52343 0.540167 8.31233 0.28323 8.03437 0.135067C7.75642 -0.0130963 7.43397 -0.040564 7.13684 0.0586094L6.25916 0.365244C5.35777 0.680167 4.59079 0.947023 3.98354 1.23874C3.33674 1.54869 2.7706 1.92826 2.32149 2.52495C1.87079 3.12165 1.64781 3.78464 1.50707 4.51394C1.37581 5.20179 1.30307 6.0438 1.21767 7.03663L0.113861 19.7496C0.0400701 20.2002 0.00198661 20.6565 0 21.1137C0.00790698 25.4546 3.36837 29 7.51163 29C9.29463 29.0003 11.0196 28.3359 12.3781 27.1255C13.7366 25.9151 14.64 24.2377 14.9268 22.3933L15.2731 22.264C16.3899 21.8464 17.6101 21.8464 18.7269 22.264L19.0748 22.3933C19.3615 24.2374 20.2647 25.9146 21.6229 27.125C22.981 28.3353 24.7056 28.9999 26.4884 29C30.6316 29 33.9905 25.453 34 21.1137C34 20.6485 33.9615 20.1938 33.8846 19.7496L32.7823 7.03829C32.6969 6.0438 32.6242 5.20345 32.4929 4.51725C32.3522 3.7863 32.1292 3.12165 31.6785 2.52661C31.2278 1.93157 30.6633 1.54869 30.0165 1.2404C29.4092 0.94868 28.6438 0.681824 27.7408 0.366902L26.8632 0.0602667C26.566 -0.0389067 26.2436 -0.0114389 25.9656 0.136724C25.6877 0.284887 25.4766 0.541824 25.378 0.851915C25.2795 1.16201 25.3014 1.5003 25.4391 1.79357C25.5767 2.08684 25.8191 2.31148 26.1136 2.41887L26.9327 2.70396C27.9085 3.0454 28.5521 3.27248 29.0297 3.50121C29.482 3.71668 29.6844 3.89072 29.8204 4.06973C29.9548 4.24708 30.0687 4.49405 30.1667 5.00455C30.2695 5.54489 30.3327 6.25264 30.426 7.32669L31.0823 14.8998C30.0583 14.0699 28.8471 13.5314 27.5662 13.3366C26.2852 13.1418 24.9779 13.2972 23.7711 13.7878C22.5643 14.2784 21.499 15.0875 20.6784 16.1367C19.8577 17.1859 19.3097 18.4396 19.0874 19.7761C17.7238 19.3626 16.2762 19.3626 14.9126 19.7761C14.6903 18.4396 14.1423 17.1859 13.3216 16.1367C12.501 15.0875 11.4357 14.2784 10.2289 13.7878C9.02209 13.2972 7.71482 13.1418 6.43384 13.3366C5.15287 13.5314 3.94166 14.0699 2.91767 14.8998L2.99358 14.018L3.57395 7.32669C3.66726 6.25264 3.73051 5.54489 3.8333 5.00621C3.93135 4.49405 4.04521 4.24708 4.18121 4.06973C4.31563 3.89072 4.51805 3.71834 4.97033 3.50121C5.44791 3.27248 6.09153 3.0454 7.06726 2.70562L7.88642 2.41721Z" />
+                    </svg>
+                </button>
+                <button class="btn-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <!-- mobile -->
+             <div class="header__mobile">
+                <div class="mobile-menu">
+                    <ul class="mobile-menu__list">
+                        <li class="mobile-menu__item">
+                            <a href="" class="mobile-menu__link">Главная</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="" class="mobile-menu__link">Об ОПОРЕ</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="" class="mobile-menu__link">Комитеты и комиссии</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="" class="mobile-menu__link">Проекты</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="" class="mobile-menu__link">Анонсы</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="" class="mobile-menu__link">Новости</a>
+                        </li>
+                    </ul>
+                    <div class="mobile-menu__form">
+                        <p class="mobile-menu__form-title">Заполните анкету на главном сайте, станьте членом «ОПОРЫ РОССИИ»</p>
+                        <a href="" class="btn btn--red mobile-menu__form-link">ВСТУПИТЬ В ОПОРУ</a>
+                    </div>
+                    <ul class="mobile-menu__info">
+                        <li class="mobile-menu__info-item">
+                            <ul class="social-list">
+                                <li class="social-list__item">
+                                    <a href="" class="social-list__link">
+                                        <img src="../assets/img/icons/i-tg.png" alt="">
+                                    </a>
+                                </li>
+                                <li class="social-list-item">
+                                    <a href="" class="social-list__link">
+                                        <img src="../assets/img/icons/i-vk.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>                        
+                        <li class="mobile-menu__info-item">
+                            <a href="tel:" class="mobile-menu__info-item__link">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.9778 8.65556C14.3778 11.8 11.8 14.3778 8.65555 15.9778L6.21111 13.5333C5.9 13.2222 5.46667 13.1333 5.07778 13.2556C3.83333 13.6667 2.5 13.8889 1.11111 13.8889C0.816425 13.8889 0.53381 14.006 0.325436 14.2143C0.117062 14.4227 0 14.7053 0 15V18.8889C0 19.1836 0.117062 19.4662 0.325436 19.6746C0.53381 19.8829 0.816425 20 1.11111 20C6.12076 20 10.9252 18.0099 14.4676 14.4676C18.0099 10.9252 20 6.12076 20 1.11111C20 0.816426 19.8829 0.533811 19.6746 0.325437C19.4662 0.117063 19.1836 0 18.8889 0H15C14.7053 0 14.4227 0.117063 14.2143 0.325437C14.006 0.533811 13.8889 0.816426 13.8889 1.11111C13.8889 2.5 13.6667 3.83333 13.2556 5.07778C13.1333 5.46667 13.2222 5.9 13.5333 6.21111L15.9778 8.65556Z" />
+                                </svg>
+                                +7 937 019 58 58
+                            </a>
+                        </li>                        
+                        <li class="mobile-menu__info-item">
+                            <a href="mailto:" class="mobile-menu__info-item__link">
+                                <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 5.58594V13.71C0 14.4633 0.299273 15.1858 0.831983 15.7185C1.36469 16.2513 2.0872 16.5505 2.84057 16.5505H17.0434C17.7968 16.5505 18.5193 16.2513 19.052 15.7185C19.5847 15.1858 19.884 14.4633 19.884 13.71V5.58594L11.4304 10.787C10.9828 11.0624 10.4676 11.2082 9.94199 11.2082C9.41642 11.2082 8.90116 11.0624 8.45353 10.787L0 5.58594Z" />
+                                    <path d="M19.884 3.91791V3.7683C19.884 3.01494 19.5847 2.29243 19.052 1.75972C18.5193 1.22701 17.7968 0.927734 17.0434 0.927734H2.84057C2.0872 0.927734 1.36469 1.22701 0.831983 1.75972C0.299273 2.29243 0 3.01494 0 3.7683V3.91791L9.19776 9.57821C9.42158 9.71591 9.67921 9.78881 9.94199 9.78881C10.2048 9.78881 10.4624 9.71591 10.6862 9.57821L19.884 3.91791Z" />
+                                </svg>    
+                                Oporaru21@gmail.com
+                            </a>
+                        </li>                        
+                    </ul>
+                </div>
+             </div>
+        </div>
+    </header>
+
+    <main class="second-page">
+        <!-- Хлебные крошки -->
+        <section class="breadcrumb-section">
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb__item">
+                        <a href="../index.html" class="breadcrumb__item-link">Главная</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <a href="../index.html" class="breadcrumb__item-link">Комитеты и комиссии</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <span class="breadcrumb__item-link breadcrumb__item-link--active">Бюро по информационно-техническому развитию</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="title-section">
+            <div class="container">
+                <h1 class="title-section__title">Бюро по информационно-техническому развитию</h1>
+            </div>
+        </section>
+
+        <section class="committees-detail-section">
+            <div class="container">
+                <div class="committees-card">
+                    <div class="committees-card__wrapper">
+                        <div class="committees-card__left">
+                            <img src="../assets/img/committees/card.png" alt="">
+                        </div>
+                        <div class="committees-card__info">
+                            <span class="committees-card__info-title">Председатель Комитета</span>
+                            <p class="committees-card__info-name">Бакшандаев 
+                                Алексей Валерьевич</p>
+                            <div class="committees-card__info-wrapper">
+                                <ul class="committees-card__info-list">
+                                    <li class="committees-card__info-item">
+                                        <a href="" class="committees-card__info-link">
+                                            <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 5.58594V13.71C0 14.4633 0.299273 15.1858 0.831983 15.7185C1.36469 16.2513 2.0872 16.5505 2.84057 16.5505H17.0434C17.7968 16.5505 18.5193 16.2513 19.052 15.7185C19.5847 15.1858 19.884 14.4633 19.884 13.71V5.58594L11.4304 10.787C10.9828 11.0624 10.4676 11.2082 9.94199 11.2082C9.41642 11.2082 8.90116 11.0624 8.45353 10.787L0 5.58594Z" />
+                                                <path d="M19.884 3.91791V3.7683C19.884 3.01494 19.5847 2.29243 19.052 1.75972C18.5193 1.22701 17.7968 0.927734 17.0434 0.927734H2.84057C2.0872 0.927734 1.36469 1.22701 0.831983 1.75972C0.299273 2.29243 0 3.01494 0 3.7683V3.91791L9.19776 9.57821C9.42158 9.71591 9.67921 9.78881 9.94199 9.78881C10.2048 9.78881 10.4624 9.71591 10.6862 9.57821L19.884 3.91791Z" />
+                                            </svg>
+                                            Oporaru21@gmail.com
+                                        </a>
+                                    </li>
+                                    <li class="committees-card__info-item">
+                                        <a href="" class="committees-card__info-link">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.9778 8.65556C14.3778 11.8 11.8 14.3778 8.65555 15.9778L6.21111 13.5333C5.9 13.2222 5.46667 13.1333 5.07778 13.2556C3.83333 13.6667 2.5 13.8889 1.11111 13.8889C0.816425 13.8889 0.53381 14.006 0.325436 14.2143C0.117062 14.4227 0 14.7053 0 15V18.8889C0 19.1836 0.117062 19.4662 0.325436 19.6746C0.53381 19.8829 0.816425 20 1.11111 20C6.12076 20 10.9252 18.0099 14.4676 14.4676C18.0099 10.9252 20 6.12076 20 1.11111C20 0.816426 19.8829 0.533811 19.6746 0.325437C19.4662 0.117063 19.1836 0 18.8889 0H15C14.7053 0 14.4227 0.117063 14.2143 0.325437C14.006 0.533811 13.8889 0.816426 13.8889 1.11111C13.8889 2.5 13.6667 3.83333 13.2556 5.07778C13.1333 5.46667 13.2222 5.9 13.5333 6.21111L15.9778 8.65556Z"/>
+                                            </svg>
+                                            +7 937 019 58 58
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="social-list">
+                                    <li class="social-list__item">
+                                        <a href="" class="social-list__link">
+                                            <img src="../assets/img/icons/i-tg.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="social-list-item">
+                                        <a href="" class="social-list__link">
+                                            <img src="../assets/img/icons/i-vk.png" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="committees-grid">
+                    <div class="committees-grid__col committees-grid__col--big">
+                        <div class="committees-grid__item">
+                            <h2 class="committees-grid__item-title">Цели</h2>
+                            <ul class="committees-grid__item-list">
+                                <li class="committees-grid__item-item">
+                                    <p class="committees-grid__item-text">Объединение участников IT-сферы на площадке «ОПОРЫ РОССИИ»</p>
+                                </li>
+                                <li class="committees-grid__item-item">
+                                    <p class="committees-grid__item-text">Формирование благоприятных условий для широкого развития сферы IT в России</p>
+                                </li>
+                                <li class="committees-grid__item-item">
+                                    <p class="committees-grid__item-text">Формирование условий для развития цифровой экономики и цифрового общества</p>
+                                </li>
+                                <li class="committees-grid__item-item">
+                                    <p class="committees-grid__item-text">Развитие механизмов государственно-частного партнерства в сфере IT</p>
+                                </li>
+                                <li class="committees-grid__item-item">
+                                    <p class="committees-grid__item-text">Развитие IT-инструментов для «умной экономики»</p>
+                                </li>
+                                <li class="committees-grid__item-item">
+                                    <p class="committees-grid__item-text">Расширение экспортного потенциала российских IT-компаний</p>
+                                </li>
+                                <li class="committees-grid__item-item">
+                                    <p class="committees-grid__item-text">Формирование инфраструктурных проектов в сфере IT для российских регионов</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="committees-grid__col committees-grid__col--small">
+                        <div class="committees-grid__item">
+                            <h2 class="committees-grid__item-title">Приоритетные направления</h2>
+                            <ul class="committees-grid__item-list">
+                                <li class="committees-grid__item-item">
+                                    <p class="committees-grid__item-text">Выявление, анализ, систематизация и решение актуальных для IT-сферы вопросов</p>
+                                </li>
+                                <li class="committees-grid__item-item">
+                                    <p class="committees-grid__item-text">Проектная деятельность (поддержка действующих и формирование новых проектов «ОПОРЫ РОССИИ» в сфере IT)</p>
+                                </li>
+                                <li class="committees-grid__item-item">
+                                    <p class="committees-grid__item-text">Синергия взаимодействия с «ОПОРОЙ РОССИИ»</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="committees-grid__item">
+                            <h2 class="committees-grid__item-title">Приоритетные направления</h2>
+                            <ul class="committees-grid__item-list">
+                                <li class="committees-grid__item-item">
+                                    <p class="committees-grid__item-text">Актуализация вопросов нормативно-правового регулирования отрасли</p>
+                                </li>
+                                <li class="committees-grid__item-item">
+                                    <p class="committees-grid__item-text">Правоприменительная практика в сфере IT: разбор кейсов, типовых проблем Работа со статистическими данными и аналитикой</p>
+                                </li>
+                                <li class="committees-grid__item-item">
+                                    <p class="committees-grid__item-text">Формирование экспертного пула комитета и экспертиза важнейших для IT-сферы тем</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <div class="container">
+                <div class="news">
+                    <h2 class="news__title">Новости</h2>
+                    <div class="news__inner">
+                        <div class="news__wrapper">
+                            <div class="news__item">
+                                <span class="news__date">16.01.2025</span>
+                                <div class="news__card">
+                                    <div class="news__card-img">
+                                        <img src="../assets/img/news/news-1.png" alt="">
+                                    </div>
+                                    <div class="news__card-info">
+                                        <p class="news__card-name">Конкурс «Наследие выдающихся предпринимателей России»</p>
+                                        <p class="news__card-text">Конкурс «Наследие выдающихся предпринимателей России» готовит образовательные</p>
+                                        <a href="" class="news__card-link">подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__item">
+                                <span class="news__date">16.01.2025</span>
+                                <div class="news__card">
+                                    <div class="news__card-img">
+                                        <img src="../assets/img/news/news-2.png" alt="">
+                                    </div>
+                                    <div class="news__card-info">
+                                        <p class="news__card-name">Крещение Господне</p>
+                                        <p class="news__card-text">В ночь с 18 на 19 января православные христиане традиционно празднуют Крещение</p>
+                                        <a href="" class="news__card-link">подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__item">
+                                <span class="news__date">15.01.2025</span>
+                                <div class="news__card">
+                                    <div class="news__card-img">
+                                        <img src="../assets/img/news/news-3.png" alt="">
+                                    </div>
+                                    <div class="news__card-info">
+                                        <p class="news__card-name">Вместе создаем будущее молодежного предпринимательства!</p>
+                                        <p class="news__card-text">Мы совместно с Канашским филиалом Финуниверситета проводим форсайт-сессию</p>
+                                        <a href="" class="news__card-link">подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__item">
+                                <span class="news__date">15.01.2025</span>
+                                <div class="news__card">
+                                    <div class="news__card-img">
+                                        <img src="../assets/img/news/news-4.png" alt="">
+                                    </div>
+                                    <div class="news__card-info">
+                                        <p class="news__card-name">Чувашия участвует в бережливом проекте «Сквозной инвестиционный поток»!</p>
+                                        <p class="news__card-text">В 2024 году Чувашская Республика вошла в число регионов, реализующих</p>
+                                        <a href="" class="news__card-link">подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="news__more">все новости</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__top">
+                    <div class="footer__left">
+                        <a href="" class="footer__logo">
+                            <img src="../assets/img/icons/footer-logo.svg" class="footer__logo-img" alt="">
+                        </a>
+                        <div class="footer__row">
+                            <div class="footer__col">
+                                <ul class="footer-info">
+                                    <li class="footer-info__item">
+                                        <span class="footer-info__name">Председатель:</span>
+                                        <p class="footer-info__value">Андреев Евгений Александрович</p>
+                                    </li>
+                                    <li class="footer-info__item">
+                                        <span class="footer-info__name">ИНН:</span>
+                                        <p class="footer-info__value">2130999919</p>
+                                    </li>
+                                    <li class="footer-info__item">
+                                        <span class="footer-info__name">КПП:</span>
+                                        <p class="footer-info__value">213001001</p>
+                                    </li>
+                                    <li class="footer-info__item">
+                                        <span class="footer-info__name">ОГРН:</span>
+                                        <p class="footer-info__value">1132100000834</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__col">
+                                <ul class="footer-menu">
+                                    <li class="footer-menu__item">
+                                        <a href="" class="footer-menu__link">Главная</a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a href="" class="footer-menu__link">Об ОПОРЕ</a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a href="" class="footer-menu__link">Комитеты и комиссии</a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a href="" class="footer-menu__link">Проекты</a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a href="" class="footer-menu__link">Анонсы</a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a href="" class="footer-menu__link">Новости</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-form">
+                        <div class="footer-form__inner">
+                            <div class="footer-form__wrapper">
+                                <p class="footer-form__title">Заполните анкету на главном сайте, станьте членом «ОПОРЫ РОССИИ»</p>
+                                <a href="" class="btn btn--red footer-form__link">ВСТУПИТЬ В ОПОРУ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <ul class="contacts-list">
+                        <li class="contacts-list__item">
+                            <p class="contacts-list__link">
+                                <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.95976 26C8.95976 26 0 14.131 0 9.1C-1.75329e-08 7.90497 0.231751 6.72164 0.682021 5.61758C1.13229 4.51352 1.79226 3.51034 2.62425 2.66533C3.45624 1.82032 4.44396 1.15001 5.53101 0.692696C6.61806 0.235378 7.78315 0 8.95976 0C10.1364 0 11.3015 0.235378 12.3885 0.692696C13.4756 1.15001 14.4633 1.82032 15.2953 2.66533C16.1273 3.51034 16.7872 4.51352 17.2375 5.61758C17.6878 6.72164 17.9195 7.90497 17.9195 9.1C17.9195 14.131 8.95976 26 8.95976 26ZM8.95976 11.7C9.6387 11.7 10.2898 11.4261 10.7699 10.9385C11.25 10.4509 11.5197 9.78956 11.5197 9.1C11.5197 8.41044 11.25 7.74912 10.7699 7.26152C10.2898 6.77393 9.6387 6.5 8.95976 6.5C8.28083 6.5 7.6297 6.77393 7.14962 7.26152C6.66954 7.74912 6.39983 8.41044 6.39983 9.1C6.39983 9.78956 6.66954 10.4509 7.14962 10.9385C7.6297 11.4261 8.28083 11.7 8.95976 11.7Z" />
+                                </svg>
+                                Юридический адрес: <br> 428000, Чувашская Республика, г. Чебоксары, ул. Нижегородская, д.6, стр.2, пом. 6
+                            </p>
+                        </li>
+                        <li class="contacts-list__item">
+                            <a href="" class="contacts-list__link">
+                                <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 5.58594V13.71C0 14.4633 0.299273 15.1858 0.831983 15.7185C1.36469 16.2513 2.0872 16.5505 2.84057 16.5505H17.0434C17.7968 16.5505 18.5193 16.2513 19.052 15.7185C19.5847 15.1858 19.884 14.4633 19.884 13.71V5.58594L11.4304 10.787C10.9828 11.0624 10.4676 11.2082 9.94199 11.2082C9.41642 11.2082 8.90116 11.0624 8.45353 10.787L0 5.58594Z" />
+                                    <path d="M19.884 3.91791V3.7683C19.884 3.01494 19.5847 2.29243 19.052 1.75972C18.5193 1.22701 17.7968 0.927734 17.0434 0.927734H2.84057C2.0872 0.927734 1.36469 1.22701 0.831983 1.75972C0.299273 2.29243 0 3.01494 0 3.7683V3.91791L9.19776 9.57821C9.42158 9.71591 9.67921 9.78881 9.94199 9.78881C10.2048 9.78881 10.4624 9.71591 10.6862 9.57821L19.884 3.91791Z" />
+                                </svg>
+                                Oporaru21@gmail.com
+                            </a>
+                        </li>
+                        <li class="contacts-list__item">
+                            <a href="" class="contacts-list__link">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.9778 8.65556C14.3778 11.8 11.8 14.3778 8.65555 15.9778L6.21111 13.5333C5.9 13.2222 5.46667 13.1333 5.07778 13.2556C3.83333 13.6667 2.5 13.8889 1.11111 13.8889C0.816425 13.8889 0.53381 14.006 0.325436 14.2143C0.117062 14.4227 0 14.7053 0 15V18.8889C0 19.1836 0.117062 19.4662 0.325436 19.6746C0.53381 19.8829 0.816425 20 1.11111 20C6.12076 20 10.9252 18.0099 14.4676 14.4676C18.0099 10.9252 20 6.12076 20 1.11111C20 0.816426 19.8829 0.533811 19.6746 0.325437C19.4662 0.117063 19.1836 0 18.8889 0H15C14.7053 0 14.4227 0.117063 14.2143 0.325437C14.006 0.533811 13.8889 0.816426 13.8889 1.11111C13.8889 2.5 13.6667 3.83333 13.2556 5.07778C13.1333 5.46667 13.2222 5.9 13.5333 6.21111L15.9778 8.65556Z"/>
+                                </svg>
+                                +7 937 019 58 58
+                            </a>
+                        </li>
+                        <li class="contacts-list__item">
+                            <ul class="social-list">
+                                <li class="social-list__item">
+                                    <a href="" class="social-list__link">
+                                        <img src="../assets/img/icons/i-tg.png" alt="">
+                                    </a>
+                                </li>
+                                <li class="social-list-item">
+                                    <a href="" class="social-list__link">
+                                        <img src="../assets/img/icons/i-vk.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <span class="footer__copyright">© 2025 Общественная организация малого и среднего предпринимательства «ОПОРА РОСCИИ» Чувашское региональное отделение. Разработка cайта <a href="" class="footer__copyright-link">hi-tech media</a></span>
+            </div>
+        </div>
+    </footer>
+
+<script src="../assets/libs/jquery.min.js"></script>
+<script src="../assets/libs/swiper-bundle.min.js"></script>
+<script src="../assets/js/script.js"></script>
+<script src="../assets/js/swiper.js"></script>
+</body>
+</html>

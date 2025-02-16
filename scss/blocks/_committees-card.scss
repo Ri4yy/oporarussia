@@ -1,0 +1,184 @@
+.committees-card {
+    max-width: 830px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    background: #fff;
+
+    container: card / inline-size;
+
+    &__left {
+        flex-shrink: 0;
+        width: 310px;
+
+        @media(max-width: $breakpoint768) {
+            width: 30%;
+            min-width: 200px;
+        }
+        @media(max-width: $breakpoint480) {
+            width: 140px;
+        }
+        @media(max-width: $breakpoint375) {
+            width: 100% !important;
+        }
+
+
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__wrapper {
+        display: flex;
+
+        @media(max-width: $breakpoint375) {
+            flex-direction: column;
+        }
+
+        @container card (max-width: 550px) {
+
+            & .committees-card__left {
+                min-width: auto;
+                width: 140px ;
+            }   
+            & .committees-card__info {
+                padding: 14px 32px 24px;
+
+                &-wrapper {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                &-title {
+                    font-size: 18px;
+                }
+                &-name {
+                    font-size: 16px;
+                }
+            }
+
+            & .social-list {
+                margin-top: 10px;
+                flex-direction: row !important;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding: 32px 60px 64px 60px;
+
+        @media(max-width: $breakpoint1024) {
+            padding: 32px 32px 24px 48px;
+        }
+        @media(max-width: $breakpoint768) {
+            width: 100%;
+        }
+
+        &-title {
+            font-weight: 600;
+            font-size: 24px;
+            color: #000;
+
+            @media(max-width: $breakpoint768) {
+                font-size: 20px;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 12px !important;
+            }
+        }
+        &-name {
+            margin-top: 26px;
+            font-weight: 400;
+            font-size: 24px;
+            color: #000;
+
+            @media(max-width: $breakpoint768) {
+                margin-top: 10px;
+                margin-bottom: 20px;
+
+                font-size: 20px;
+            }
+            @media(max-width: $breakpoint480) {
+                margin-top: 4px;
+                margin-bottom: 44px;
+
+                font-size: 12px !important;
+            }
+        }
+        &-wrapper {
+            margin-block-start: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+
+            & .social-list {
+
+                @media(max-width: $breakpoint768) {
+                    flex-direction: column;
+                    gap: 8px;
+                }
+                &__link {
+                    @media(max-width: $breakpoint768) {
+                        width: 24px;
+                    }
+                }
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            @media(max-width: $breakpoint768) {
+                gap: 14px;
+            }
+        }
+        &-item {
+            display: flex;
+        }
+        &-link {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            font-weight: 600;
+            font-size: 20px;
+            text-decoration: underline !important;
+            color: $main-color;
+
+            transition: color .3s;
+
+            @media(max-width: $breakpoint768) {
+                font-size: 16px;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 12px;
+                gap: 6px;
+            }
+
+            & svg {
+                width: 20px;
+                height: fit-content;
+                flex-shrink: 0;
+                fill: $main-color;
+                transition: fill .3s;
+
+                @media(max-width: $breakpoint480) {
+                    width: 10px;
+                }
+            }
+
+            &:hover {
+                color: $red;
+
+                & svg {
+                    fill: $red;
+                }
+            }
+        }
+    }
+}

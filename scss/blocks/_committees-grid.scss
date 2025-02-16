@@ -1,0 +1,60 @@
+.committees-grid {
+    margin-top: 72px;
+
+    display: grid;
+    grid-template-columns: 40% 56%;
+    gap: 50px;
+
+    @media(max-width: $breakpoint768) {
+        margin-top: 36px;
+
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    &__col {
+
+        &--small {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            @media(max-width: $breakpoint768) {
+                gap: 25px;
+            }
+        }
+    }
+    &__item {
+
+        &-title {
+            
+        }
+        &-list {
+            margin-top: 24px;
+
+            display: flex;
+            flex-direction: column;
+        }
+        &-item {
+            position: relative;
+            padding-left: 24px;
+    
+            &::before {
+                content: '';
+                position: absolute;
+                top: 7px;
+                left: 10px;
+    
+                width: 4px;
+                height: 4px;
+                background: #000;
+                border-radius: 100%;
+            }
+        }
+        &-text {
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+        }
+    }
+}

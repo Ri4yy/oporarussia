@@ -1,0 +1,44 @@
+.committees {
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        justify-content: space-between;
+        column-gap: 40px;
+        row-gap: 60px;
+
+        @media(max-width: $breakpoint1280) {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+        @media(max-width: $breakpoint768) {
+            row-gap: 40px;
+        }
+    }
+    &__item {
+        display: flex;
+
+        &-link {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            @media(max-width: $breakpoint480) {
+                gap: 16px;
+            }
+        }
+        &-icon {
+            width: 42px;
+            display: flex;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        &-img {
+            object-fit: contain;
+        }
+        &-text {
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+        }
+    }
+}

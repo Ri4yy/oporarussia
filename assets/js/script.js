@@ -49,5 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-
+    function tabs(wrapperMain, wrapperTab, wrapperContent, activeTab, activeContent) {
+        $(wrapperTab).on('click', 'li:not('+activeTab+')', function () {
+            $(this)
+                .addClass(activeTab).siblings().removeClass(activeTab)
+                .closest(wrapperMain).find(wrapperContent).removeClass(activeContent).eq($(this).index()).addClass(activeContent);
+        });
+    }
+    tabs('.tabs', '.tabs__list', '.tabs__content', 'active-tab', 'active');
 })
