@@ -1,40 +1,43 @@
 .second-page {
-    margin-top: 180px;
+    margin-top: 184px;
 
-    @media(max-width: $breakpoint1024) {
-        margin-top: 120px;
+    @media(max-width: $breakpoint1280) {
+        margin-top: 170px;
     }
-    @media(max-width: $breakpoint768) {
-        margin-top: 100px;
+    @media(max-width: $breakpoint1024) {
+        margin-top: 84px;
+    }
+    @media(max-width: $breakpoint375) {
+        margin-top: 76px;
     }
 }
 
 .about-section {
-    padding-top: 90px;
+    padding-top: 50px;
 
     @media(max-width: $breakpoint768) {
-        padding-top: 50px;
+        padding-top: 30px;
     }
 }
 
 .faces-section {
-    padding-top: 90px;
+    padding-top: 50px;
 
     @media(max-width: $breakpoint768) {
-        padding-top: 50px;
+        padding-top: 30px;
     }
 }
 
 .news-section {
-    padding-top: 90px;
+    padding-top: 50px;
 
     @media(max-width: $breakpoint768) {
-        padding-top: 50px;
+        padding-top: 30px;
     }
 }
 
 .bottom-section {
-    padding: 90px 0 140px;
+    padding: 50px 0 140px;
 
     background-image: url(../assets/img/bg/bottom-bg.svg);
     background-repeat: no-repeat;

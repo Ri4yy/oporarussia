@@ -5,7 +5,7 @@
         margin-top: 28px;
 
         max-width: 900px;
-        max-height: 114px;
+        max-height: 174px;
         overflow: hidden;
 
         &.open {
@@ -18,7 +18,8 @@
     }
     &__text {
         font-weight: 400;
-        font-size: 16px;
+        font-size: 18px;
+        line-height: 1.4;
         color: #000;
     }
     &__list {

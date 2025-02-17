@@ -5,6 +5,10 @@
     column-gap: 20px;
     row-gap: 4px;
 
+    @media(max-width: $breakpoint480) {
+        column-gap: 10px;
+    }
+
     &__item {
         display: flex;
 
@@ -35,6 +39,10 @@
                 display: flex;
                 align-items: center;
                 gap: 20px;
+
+                @media(max-width: $breakpoint480) {
+                    column-gap: 10px;
+                }
 
                 &::before {
                     content: '/';
