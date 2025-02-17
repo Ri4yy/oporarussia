@@ -220,6 +220,7 @@ h3 {
   gap: 44px;
   padding: 22px;
   z-index: 2;
+  border: 1px solid #091C5A;
   border-radius: 30px;
   background: #091C5A;
 }
@@ -575,6 +576,10 @@ h3 {
   display: none;
 }
 
+.header--light .btn-menu::after {
+  display: none;
+}
+
 .menu-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -658,6 +663,8 @@ h3 {
   background: #091C5A;
   border-radius: 30px;
   width: 100%;
+  height: 530px;
+  overflow-x: scroll;
   padding: 25px 16px;
 }
 .mobile-menu__list {
