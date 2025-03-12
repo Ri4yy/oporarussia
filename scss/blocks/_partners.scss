@@ -42,5 +42,19 @@
                 max-width: 100px;
             }
         }
+
+        &-icon {
+            aspect-ratio: 367 / 112;
+            width: 200px;
+            background-image: var(--icon);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+            filter: grayscale(100%);
+
+            &:hover {
+                filter: none;
+            }
+        }
     }
 }

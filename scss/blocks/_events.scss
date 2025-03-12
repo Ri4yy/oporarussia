@@ -1,0 +1,142 @@
+.events {
+
+    &__wrapper {
+        margin-top: 50px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        @media(max-width: $breakpoint480) {
+            margin-top: 25px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        gap: 48px;
+
+        border-radius: 10px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+        background: #fff;
+        padding: 20px 75px 40px 24px;
+
+        @media(max-width: $breakpoint992) {
+            flex-direction: column;
+            gap: 25px;
+        }
+        @media(max-width: $breakpoint480) {
+            padding: 25px 20px 24px;
+        }
+        @media(max-width: $breakpoint375) {
+            padding: 20px 16px;
+        }
+
+        &-left {
+            flex-shrink: 0;
+            width: 360px;
+
+            @media(max-width: $breakpoint480) {
+                width: 100%;
+            }
+        }
+        &-img {
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        &-date {
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+        }
+        &-name {
+            margin-top: 25px;
+
+            font-weight: 400;
+            font-size: 20px;
+            color: $main-color;
+
+            @media(max-width: $breakpoint375) {
+                margin-top: 12px;
+                font-size: 16px;
+            }
+        }
+        &-text {
+            margin-top: 50px;
+
+            font-weight: 400;
+            font-size: 16px;
+            text-align: justify;
+            color: #000;
+
+            -webkit-line-clamp: 7;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+
+            @media(max-width: $breakpoint992) {
+                margin-top: 25px;
+            }
+            @media(max-width: $breakpoint480) {
+                -webkit-line-clamp: 9;
+            }
+            @media(max-width: $breakpoint375) {
+                margin-top: 16px;
+                font-size: 14px;
+            }
+
+            &.open {
+                -webkit-line-clamp: 100;
+            }
+        }
+        &-btn {
+            margin-top: 30px;
+
+            font-weight: 400;
+            font-size: 16px;
+            text-decoration: underline;
+            color: #000;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        overflow-x: auto;
+        
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            min-width: 141px;
+            height: 32px;
+            background: #d9d9d9;
+
+            @media(max-width: $breakpoint768) {
+                min-width: 126px;
+            }
+
+            &:first-child {
+                border-radius: 14px 0 0 14px;
+                background-color: $main-color;
+            }
+            &:last-child {
+                border-radius: 0 14px 14px 0;
+                background-color: #ECECEC;
+            }
+
+            &__link {
+                display: block;
+                font-weight: 400;
+                font-size: 20px;
+                text-align: center;
+                color: #fff;
+
+                @media(max-width: $breakpoint768) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

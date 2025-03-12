@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Комитеты</title>
+    <title>Проект детально</title>
 
     <script src="https://lidrekon.ru/slep/js/jquery.js"></script>
     <script src="https://lidrekon.ru/slep/js/uhpv-full.min.js"></script>
 
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../assets/libs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/libs/jquery.fancybox.min.css">
 </head>
 <body>
     <header class="header">
@@ -54,22 +56,22 @@
                 <nav class="menu">
                     <ul class="menu-nav">
                         <li class="menu-nav__item">
-                            <a href="../index.html" class="menu-nav__link">Главная</a>
+                            <a href="" class="menu-nav__link menu-nav__link--active">Главная</a>
                         </li>
                         <li class="menu-nav__item">
-                            <a href="./about.html" class="menu-nav__link">Об ОПОРЕ</a>
+                            <a href="" class="menu-nav__link">Об ОПОРЕ</a>
                         </li>
                         <li class="menu-nav__item">
-                            <a href="./committees.html" class="menu-nav__link menu-nav__link--active">Комитеты и комиссии</a>
+                            <a href="" class="menu-nav__link">Комитеты и комиссии</a>
                         </li>
                         <li class="menu-nav__item">
-                            <a href="./projects.html" class="menu-nav__link">Проекты</a>
+                            <a href="" class="menu-nav__link">Проекты</a>
                         </li>
                         <li class="menu-nav__item">
-                            <a href="./events.html" class="menu-nav__link">Анонсы</a>
+                            <a href="" class="menu-nav__link">Анонсы</a>
                         </li>
                         <li class="menu-nav__item">
-                            <a href="./news.html" class="menu-nav__link">Новости</a>
+                            <a href="" class="menu-nav__link">Новости</a>
                         </li>
                     </ul>
                 </nav>
@@ -90,22 +92,22 @@
                 <div class="mobile-menu">
                     <ul class="mobile-menu__list">
                         <li class="mobile-menu__item">
-                            <a href="../index.html" class="mobile-menu__link">Главная</a>
+                            <a href="" class="mobile-menu__link">Главная</a>
                         </li>
                         <li class="mobile-menu__item">
-                            <a href="./about.html" class="mobile-menu__link">Об ОПОРЕ</a>
+                            <a href="" class="mobile-menu__link">Об ОПОРЕ</a>
                         </li>
                         <li class="mobile-menu__item">
-                            <a href="./committees.html" class="mobile-menu__link">Комитеты и комиссии</a>
+                            <a href="" class="mobile-menu__link">Комитеты и комиссии</a>
                         </li>
                         <li class="mobile-menu__item">
-                            <a href="./projects.html" class="mobile-menu__link">Проекты</a>
+                            <a href="" class="mobile-menu__link">Проекты</a>
                         </li>
                         <li class="mobile-menu__item">
-                            <a href="./events.html" class="mobile-menu__link">Анонсы</a>
+                            <a href="" class="mobile-menu__link">Анонсы</a>
                         </li>
                         <li class="mobile-menu__item">
-                            <a href="./news.html" class="mobile-menu__link">Новости</a>
+                            <a href="" class="mobile-menu__link">Новости</a>
                         </li>
                     </ul>
                     <div class="mobile-menu__form">
@@ -159,7 +161,10 @@
                         <a href="../index.html" class="breadcrumb__item-link">Главная</a>
                     </li>
                     <li class="breadcrumb__item">
-                        <span class="breadcrumb__item-link breadcrumb__item-link--active">Комитеты и комиссии</span>
+                        <span class="breadcrumb__item-link breadcrumb__item-link">Проекты</span>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <span class="breadcrumb__item-link breadcrumb__item-link--active">Название проекта</span>
                     </li>
                 </ul>
             </div>
@@ -167,100 +172,27 @@
 
         <section class="title-section">
             <div class="container">
-                <h1 class="title-section__title">Комитеты и комиссии</h1>
+                <h1 class="title-section__title">Название проекта</h1>
             </div>
         </section>
 
-        <section class="committees-section">
+        <section class="project-detail-section">
             <div class="container">
-                <div class="tabs">
-                    <ul class="tabs__list">
-                        <li class="active-tab">Комитеты по</li>
-                        <li>Комиссии по</li>
-                    </ul>
-                    <ul class="tabs__wrapper">
-                        <li class="tabs__content active">
-                            <div class="committees">
-                                <div class="committees__wrapper">
-                                    <div class="committees__item">
-                                        <a href="" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/1.svg" class="committees__item-img" alt="">
-                                            </div>
-                                            <p class="committees__item-text">Предпринимательскому образованию</p>
-                                        </a>
-                                    </div>
-                                    <div class="committees__item">
-                                        <a href="" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/2.svg" class="committees__item-img" alt="">
-                                            </div>
-                                            <p class="committees__item-text">Молодёжному предпринимательству</p>
-                                        </a>
-                                    </div>
-                                    <div class="committees__item">
-                                        <a href="" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/3.svg" class="committees__item-img" alt="">
-                                            </div>
-                                            <p class="committees__item-text">Сельскому хозяйству</p>
-                                        </a>
-                                    </div>
-                                    <div class="committees__item">
-                                        <a href="" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/4.svg" class="committees__item-img" alt="">
-                                            </div>
-                                            <p class="committees__item-text">Промышленности</p>
-                                        </a>
-                                    </div>
-                                    <div class="committees__item">
-                                        <a href="" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/5.svg" class="committees__item-img" alt="">
-                                            </div>
-                                            <p class="committees__item-text">Интеллектуальной собственности и инновациям</p>
-                                        </a>
-                                    </div>
-                                    <div class="committees__item">
-                                        <a href="./committees-detail.html" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/6.svg" class="committees__item-img" alt="">
-                                            </div>
-                                            <p class="committees__item-text">Информационному и технологическому развитию</p>
-                                        </a>
-                                    </div>
-                                    <div class="committees__item">
-                                        <a href="" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/7.svg" class="committees__item-img" alt="">
-                                            </div>
-                                            <p class="committees__item-text">Социально-трудовых отношений</p>
-                                        </a>
-                                    </div>
-                                    <div class="committees__item">
-                                        <a href="" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/8.svg" class="committees__item-img" alt="">
-                                            </div>
-                                            <p class="committees__item-text">Строительству</p>
-                                        </a>
-                                    </div>
-                                    <div class="committees__item">
-                                        <a href="" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/9.svg" class="committees__item-img" alt="">
-                                            </div>
-                                            <p class="committees__item-text">Международному и межрегиональному сотрудничеству</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="tabs__content">
-                            2
-                        </li>
-                    </ul>
+                <div class="project-detail">
+                    <div class="project-detail__wrapper">
+                        <div class="project-detail__img">
+                            <img src="../assets/img/project/project-detail.png" alt="">
+                        </div>
+                        <div class="project-detail__description">
+                            <h3 class="project-detail__description-title">Название проекта</h3>
+                            <p>
+                                В рамках этой инициативы были собраны и отправлены маскировочные сети, которые помогут защитникам Отечества скрываться от противника, а также печки-буржуйки, обеспечивающие тепло в полевых условиях. Кроме того, бойцы получили мотоцикл, который будет использоваться для выполнения различных задач, включая транспортировку личного состава и грузов. Помимо технического оборудования, важным элементом отправки стали термобелье и носки, не остались без внимания и продукты питания.<br>
+                                Эта акция поддержки демонстрирует единство и готовность общества поддержать своих защитников. Члены Чувашской «ОПОРЫ РОССИИ» во главе с Председателем Евгением Андреевым уверены, что такая помощь не только способствует улучшению условий службы, но и поднимает моральный дух военнослужащих, показывая им, что они не одни, и за их спинами стоят люди, готовые прийти на помощь.<br>
+                                «В условиях современных вызовов и сложной обстановки, сложившейся на фронте, важность поддержки наших военных становится особенно актуальной. Чувашское региональное отделение «ОПОРЫ РОССИИ» проявило активность, передав необходимые вещи и оборудование бойцам, выполняющим боевые задачи в районе проведения специальной военной операции в Запорожье. Подобные инициативы важны для единства общества и поддержки наших защитников. Каждый из нас может внести свой вклад в эту важную миссию. Давайте вместе поддерживать тех, кто защищает нашу страну», — отметил Евгений Андреев.<br>
+                                В условиях, когда каждый день на фронте становится испытанием, такие инициативы важны как никогда. Они напоминают о том, что мы все — часть одного большого дела, и каждый из нас может внести свой вклад в общую победу. Чувашская «ОПОРА РОССИИ» продолжит свою работу по поддержке бойцов, и каждый желающий может присоединиться к этой важной миссии.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -282,16 +214,16 @@
                                             <a href="../index.html" class="footer-menu__link">Главная</a>
                                         </li>
                                         <li class="footer-menu__item">
-                                            <a href="./about.html" class="footer-menu__link">Об ОПОРЕ</a>
+                                            <a href="#" class="footer-menu__link">Об ОПОРЕ</a>
                                         </li>
                                         <li class="footer-menu__item">
                                             <a href="./committees.html" class="footer-menu__link">Комитеты и комиссии</a>
                                         </li>
                                         <li class="footer-menu__item">
-                                            <a href="./projects.html" class="footer-menu__link">Проекты</a>
+                                            <a href="./project.html" class="footer-menu__link">Проекты</a>
                                         </li>
                                         <li class="footer-menu__item">
-                                            <a href="./events.html" class="footer-menu__link">Анонсы</a>
+                                            <a href="./announces.html" class="footer-menu__link">Анонсы</a>
                                         </li>
                                         <li class="footer-menu__item">
                                             <a href="./news.html" class="footer-menu__link">Новости</a>
@@ -382,6 +314,7 @@
 
     <script src="../assets/libs/jquery.min.js"></script>
     <script src="../assets/libs/swiper-bundle.min.js"></script>
+    <script src="../assets/libs/jquery.fancybox.min.js"></script>
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/swiper.js"></script>
 </body>

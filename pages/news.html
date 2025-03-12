@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Комитеты</title>
+    <title>Новости</title>
 
     <script src="https://lidrekon.ru/slep/js/jquery.js"></script>
     <script src="https://lidrekon.ru/slep/js/uhpv-full.min.js"></script>
@@ -60,7 +60,7 @@
                             <a href="./about.html" class="menu-nav__link">Об ОПОРЕ</a>
                         </li>
                         <li class="menu-nav__item">
-                            <a href="./committees.html" class="menu-nav__link menu-nav__link--active">Комитеты и комиссии</a>
+                            <a href="./committees.html" class="menu-nav__link">Комитеты и комиссии</a>
                         </li>
                         <li class="menu-nav__item">
                             <a href="./projects.html" class="menu-nav__link">Проекты</a>
@@ -69,7 +69,7 @@
                             <a href="./events.html" class="menu-nav__link">Анонсы</a>
                         </li>
                         <li class="menu-nav__item">
-                            <a href="./news.html" class="menu-nav__link">Новости</a>
+                            <a href="./news.html" class="menu-nav__link menu-nav__link--active">Новости</a>
                         </li>
                     </ul>
                 </nav>
@@ -159,7 +159,7 @@
                         <a href="../index.html" class="breadcrumb__item-link">Главная</a>
                     </li>
                     <li class="breadcrumb__item">
-                        <span class="breadcrumb__item-link breadcrumb__item-link--active">Комитеты и комиссии</span>
+                        <span class="breadcrumb__item-link breadcrumb__item-link--active">Новости</span>
                     </li>
                 </ul>
             </div>
@@ -167,103 +167,157 @@
 
         <section class="title-section">
             <div class="container">
-                <h1 class="title-section__title">Комитеты и комиссии</h1>
+                <h1 class="title-section__title">Новости</h1>
             </div>
         </section>
 
-        <section class="committees-section">
+        <section class="-section">
             <div class="container">
-                <div class="tabs">
-                    <ul class="tabs__list">
-                        <li class="active-tab">Комитеты по</li>
-                        <li>Комиссии по</li>
-                    </ul>
-                    <ul class="tabs__wrapper">
-                        <li class="tabs__content active">
-                            <div class="committees">
-                                <div class="committees__wrapper">
-                                    <div class="committees__item">
-                                        <a href="" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/1.svg" class="committees__item-img" alt="">
+                <div class="news">
+                    <div class="content content--news">
+                        <div class="content__left-menu content__left-menu--narrow">
+                            <button class="content__toggle">
+                                <span>
+                                    Меню раздела
+                                </span>
+                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.58934 7.25592C1.2639 7.58136 0.736263 7.58136 0.410826 7.25592C0.0853888 6.93049 0.0853888 6.40285 0.410826 6.07741L5.41083 1.07741C5.73626 0.751975 6.2639 0.751975 6.58934 1.07741L11.5893 6.07741C11.9148 6.40285 11.9148 6.93049 11.5893 7.25592C11.2639 7.58136 10.7363 7.58136 10.4108 7.25592L6.00008 2.84518L1.58934 7.25592Z" fill="#313144" />
+                                </svg>
+                            </button>
+                            <div class="content__left-menu__wrapper">
+                                <ul class="left-menu">
+                                    <li class="left-menu__item">
+                                        <a href="" class="left-menu__link active">Победы ОПОРЫ</a>
+                                    </li>
+                                    <li class="left-menu__item">
+                                        <a href="" class="left-menu__link">ОПОРА в лицах</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content__inner">
+                            <div class="news__container">
+                                <div class="news__wrapper">
+                                    <div class="news__item">
+                                        <span class="news__date">16.01.2025</span>
+                                        <div class="news__card">
+                                            <div class="news__card-img">
+                                                <img src="../assets/img/news/news-5.png" alt="">
                                             </div>
-                                            <p class="committees__item-text">Предпринимательскому образованию</p>
-                                        </a>
+                                            <div class="news__card-info">
+                                                <p class="news__card-name">Чувашская «ОПОРА РОССИИ» поддерживает российских бойцов в Запорожье</p>
+                                                <p class="news__card-text">Предприниматели из Чувашского регионального отделения «ОПОРЫ РОССИИ» передали российским военн</p>
+                                                <a href="./news-detail.html" class="news__card-link">подробнее</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="committees__item">
-                                        <a href="" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/2.svg" class="committees__item-img" alt="">
+                                    <div class="news__item">
+                                        <span class="news__date">16.01.2025</span>
+                                        <div class="news__card">
+                                            <div class="news__card-img">
+                                                <img src="../assets/img/news/news-6.png" alt="">
                                             </div>
-                                            <p class="committees__item-text">Молодёжному предпринимательству</p>
-                                        </a>
+                                            <div class="news__card-info">
+                                                <p class="news__card-name">За год численность МСП увеличилась на 3,8%</p>
+                                                <p class="news__card-text">Эксперты «ОПОРЫ РОССИИ» проанализировали обновленный Единый реестр субъектов МСП. По данным реестра</p>
+                                                <a href="./news-detail.html" class="news__card-link">подробнее</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="committees__item">
-                                        <a href="" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/3.svg" class="committees__item-img" alt="">
+                                    <div class="news__item">
+                                        <span class="news__date">15.01.2025</span>
+                                        <div class="news__card">
+                                            <div class="news__card-img">
+                                                <img src="../assets/img/news/news-7.png" alt="">
                                             </div>
-                                            <p class="committees__item-text">Сельскому хозяйству</p>
-                                        </a>
+                                            <div class="news__card-info">
+                                                <p class="news__card-name">Самозанятые не будут сдавать отчеты в Росстат</p>
+                                                <p class="news__card-text">С нового года вступил в силу закон, расширяющий перечень респондентов, которые подают статистические отчеты</p>
+                                                <a href="./news-detail.html" class="news__card-link">подробнее</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="committees__item">
-                                        <a href="" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/4.svg" class="committees__item-img" alt="">
+                                    <div class="news__item">
+                                        <span class="news__date">15.01.2025</span>
+                                        <div class="news__card">
+                                            <div class="news__card-img">
+                                                <img src="../assets/img/news/news-8.png" alt="">
                                             </div>
-                                            <p class="committees__item-text">Промышленности</p>
-                                        </a>
+                                            <div class="news__card-info">
+                                                <p class="news__card-name">Что нового в законодательстве для строительного бизнеса: обзор профильного Комитета «ОПОРЫ РОССИИ» за декабрь 2024 года</p>
+                                                <p class="news__card-text">Комитет «ОПОРЫ РОССИИ» по строительству подготовил подборку новых</p>
+                                                <a href="./news-detail.html" class="news__card-link">подробнее</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="committees__item">
-                                        <a href="" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/5.svg" class="committees__item-img" alt="">
+                                    <div class="news__item">
+                                        <span class="news__date">15.01.2025</span>
+                                        <div class="news__card">
+                                            <div class="news__card-img">
+                                                <img src="../assets/img/news/news-5.png" alt="">
                                             </div>
-                                            <p class="committees__item-text">Интеллектуальной собственности и инновациям</p>
-                                        </a>
+                                            <div class="news__card-info">
+                                                <p class="news__card-name">Чувашская «ОПОРА РОССИИ» поддерживает российских бойцов в Запорожье</p>
+                                                <p class="news__card-text">Предприниматели из Чувашского регионального отделения «ОПОРЫ РОССИИ» передали российским военн</p>
+                                                <a href="./news-detail.html" class="news__card-link">подробнее</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="committees__item">
-                                        <a href="./committees-detail.html" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/6.svg" class="committees__item-img" alt="">
+                                    <div class="news__item">
+                                        <span class="news__date">15.01.2025</span>
+                                        <div class="news__card">
+                                            <div class="news__card-img">
+                                                <img src="../assets/img/news/news-6.png" alt="">
                                             </div>
-                                            <p class="committees__item-text">Информационному и технологическому развитию</p>
-                                        </a>
-                                    </div>
-                                    <div class="committees__item">
-                                        <a href="" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/7.svg" class="committees__item-img" alt="">
+                                            <div class="news__card-info">
+                                                <p class="news__card-name">За год численность МСП увеличилась на 3,8%</p>
+                                                <p class="news__card-text">Эксперты «ОПОРЫ РОССИИ» проанализировали обновленный Единый реестр субъектов МСП. По данным реестра</p>
+                                                <a href="./news-detail.html" class="news__card-link">подробнее</a>
                                             </div>
-                                            <p class="committees__item-text">Социально-трудовых отношений</p>
-                                        </a>
-                                    </div>
-                                    <div class="committees__item">
-                                        <a href="" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/8.svg" class="committees__item-img" alt="">
-                                            </div>
-                                            <p class="committees__item-text">Строительству</p>
-                                        </a>
-                                    </div>
-                                    <div class="committees__item">
-                                        <a href="" class="committees__item-link">
-                                            <div class="committees__item-icon">
-                                                <img src="../assets/img/committees/9.svg" class="committees__item-img" alt="">
-                                            </div>
-                                            <p class="committees__item-text">Международному и межрегиональному сотрудничеству</p>
-                                        </a>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="pagination">
+                                    <ul class="pagination-list">
+                                        <li class="pagination-list__item">
+                                            <a href="#" class="pagination-list__prev pagination-list__link disabled">
+                                                <svg width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.5 23.2695L1.28906 12.5552L11.5 1.84096" />
+                                                    <path d="M11.5 23.2695L1.28906 12.5552L11.5 1.84096" stroke-width="1.71429" stroke-linecap="round" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="pagination-list__item">
+                                            <a href="#" class="pagination-list__link pagination-list__link--active">1</a>
+                                        </li>
+                                        <li class="pagination-list__item">
+                                            <a href="#" class="pagination-list__link">2</a>
+                                        </li>
+                                        <li class="pagination-list__item">
+                                            <a href="#" class="pagination-list__link">3</a>
+                                        </li>
+                                        <li class="pagination-list__item">
+                                            <a href="#" class="pagination-list__link">...</a>
+                                        </li>
+                                        <li class="pagination-list__item">
+                                            <a href="#" class="pagination-list__link">55</a>
+                                        </li>
+                                        <li class="pagination-list__item">
+                                            <a href="#" class="pagination-list__next pagination-list__link">
+                                                <svg width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.28906 1.8418L11.5 12.5561L1.28906 23.2704" />
+                                                    <path d="M1.28906 1.8418L11.5 12.5561L1.28906 23.2704" stroke-width="1.71429" stroke-linecap="round" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </li>
-                        <li class="tabs__content">
-                            2
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </section> 
     </main>
 
     <footer class="footer">

@@ -37,7 +37,7 @@
 }
 
 .bottom-section {
-    padding: 50px 0 140px;
+    padding: 50px 0;
 
     background-image: url(../assets/img/bg/bottom-bg.svg);
     background-repeat: no-repeat;
@@ -54,7 +54,7 @@
 }
 
 .title-section {
-    padding: 44px 0;
+    padding: 44px 0 28px;
 
     &__title {
         font-weight: 400;
@@ -64,5 +64,28 @@
         @media(max-width: $breakpoint768) {
             font-size: 20px;
         }
+    }
+}
+
+.error-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background: $main-color;
+    min-height: calc(100dvh - 200px);
+    position: relative;
+
+    background-image: url(../assets/img/bg/error-bg.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+}
+
+.opora-contact-section {
+    padding-top: 50px;
+
+    @media(max-width: $breakpoint768) {
+        padding-top: 30px;
     }
 }

@@ -1,0 +1,10 @@
+.pagination {
+    margin-top: 100px;
+
+    @media(max-width: $breakpoint1280) {
+        margin-top: 70px;
+    }
+    @media(max-width: $breakpoint992) {
+        margin-top: 50px;
+    }
+}

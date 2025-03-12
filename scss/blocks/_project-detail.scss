@@ -1,0 +1,63 @@
+.project-detail {
+
+ &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+
+        @media(max-width: $breakpoint992) {
+            flex-direction: column;
+        }
+        @media(max-width: $breakpoint768) {
+            gap: 25px;
+        }
+    }
+    &__img {
+        width: 37%;
+
+        @media(max-width: $breakpoint992) {
+            width: 50%;
+        }
+        @media(max-width: $breakpoint480) {
+            width: 100%;
+        }
+    }
+    &__description {
+        width: 63%;
+
+        &-title {
+            margin-bottom: 24px;
+
+            font-weight: 400;
+            font-size: 20px;
+            text-align: justify;
+            color: $main-color;
+        }
+
+        @media(max-width: $breakpoint992) {
+            width: 100%;
+        }
+
+        & p {
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+
+            @media(max-width: $breakpoint992) {
+                font-size: 14px;
+            }
+            @media(max-width: $breakpoint768) {
+                font-size: 12px;
+            }
+
+            &:not(:nth-of-type(1)) {
+                margin-top: 24px;
+                text-align: justify;
+
+                @media(max-width: $breakpoint992) {
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+}

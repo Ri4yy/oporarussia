@@ -1,0 +1,43 @@
+.left-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    min-height: 0;
+
+    @media(max-width: $breakpoint1280) {
+        gap: 28px;
+    }
+    @media(max-width: $breakpoint992) {
+        gap: 0;
+    }
+
+    &__item {
+        display: flex;
+
+        &:last-child {
+            border-radius: 0 0 10px 10px;
+            overflow: hidden;
+        }
+    }
+    &__link {
+        font-weight: 400;
+        font-size: 20px;
+        color: #000;
+        transition: all .3s;
+
+        @media(max-width: $breakpoint992) {
+            font-size: 16px;
+            padding: 12px 24px;
+            width: 100%;
+
+            &:hover {
+                background-color: #c4cbdf;
+            }
+        }
+       
+        &.active {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+    }
+}

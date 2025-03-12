@@ -23,12 +23,11 @@
         flex-direction: column;
         align-items: center;
 
-        background-image: url(../assets/img/bg/form-bg.png);
-        background-repeat: no-repeat;
-        background-position: 100% 50%;
-
         @media(max-width: $breakpoint768) {
             padding: 22px;
+        }
+        @media(max-width: $breakpoint375) {
+            padding: 20px 10px;
         }
 
         @container footer-form (max-width: 450px) {
@@ -62,7 +61,7 @@
             margin-top: 20px;
         }
         @media(max-width: $breakpoint375) {
-            font-size: 14px;
+            font-size: 14px !important;
             padding: 14px 32px;
         }
     }

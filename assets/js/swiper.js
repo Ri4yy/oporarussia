@@ -30,4 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
     });
     updateHeaderClass();
+
+    const swiperNews = new Swiper('.swiper-news', {
+        enabled: true,
+        slidesPerView: 1,
+      
+        pagination: {
+          el: '.swiper-news__pagination',
+        },
+      
+        navigation: {
+          nextEl: '.swiper-news__btn-next',
+          prevEl: '.swiper-news__btn-prev',
+        },
+    });
 })

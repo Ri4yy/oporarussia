@@ -1,0 +1,119 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+
+    @media(max-width: $breakpoint992) {
+        flex-direction: column;
+    }
+    &--about-us {
+        gap: 66px;
+
+        @media(max-width: $breakpoint1280) {
+            gap: 40px;
+        }
+    }
+    &--news {
+        gap: 50px;
+
+        @media(max-width: $breakpoint992) {
+            gap: 25px;
+        } 
+    }
+    &--opora {
+        gap: 100px;
+
+        @media(max-width: $breakpoint1280) {
+            gap: 80px;
+        }
+        @media(max-width: $breakpoint992) {
+            gap: 50px;
+        }
+    }
+
+    &__left-menu {
+        position: sticky;
+        top: 20px;
+
+        height: fit-content;
+        flex-shrink: 0;
+
+        border-radius: 10px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+        background: #fff;
+        padding: 34px 28px 54px 36px;
+
+        &--wide {
+            max-width: 446px;
+
+            @media(max-width: $breakpoint1280) {
+                max-width: 406px;
+            }
+        }
+        &--narrow {
+            max-width: 406px;
+            width: 100%;
+        }
+
+
+        @media(max-width: $breakpoint992) {
+            position: static;
+            max-width: 100%;
+            padding: 0;
+            box-shadow: none;
+        }
+
+        &__wrapper {
+            @media(max-width: $breakpoint992) {
+                display: grid;
+                grid-template-rows: 0fr;
+                overflow: hidden;
+                transition: all 0.3s;
+    
+                &.open {
+                    grid-template-rows: 1fr;
+                }
+            }
+           
+        }
+    }
+    &__inner {
+        width: 100%;
+    }
+
+    &__toggle {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+
+        border: 1px solid #b8bbc2;
+        border-radius: 8px;
+        padding: 11px 18px;
+        transition: all .3s;
+
+        @media(max-width: $breakpoint992) {
+            display: flex;
+            width: 100%;
+        }
+        &.active {
+            border-radius: 8px 8px 0 0;
+            border-color: #215aff;
+        }
+        & span {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 112%;
+            letter-spacing: 0.03em;
+            color: #313144;
+            pointer-events: none;
+        }
+        & svg {
+            rotate: 180deg;
+            transition: rotate .3s;
+            pointer-events: none;
+            
+            &.active {
+                rotate: 0deg;
+            }
+        }
+    }
+}

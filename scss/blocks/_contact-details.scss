@@ -1,0 +1,73 @@
+.contact-details {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 36px 38px;
+
+    @media(max-width: $breakpoint480) {
+        padding: 16px 20px;
+    }
+
+    &__item {
+        display: flex;
+        padding: 22px 0;
+
+        @media(max-width: $breakpoint768) {
+            padding: 12px 0;
+        }
+        @media(max-width: $breakpoint375) {
+            padding: 8px 0;
+            flex-direction: column;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #D7D7D7;
+        }
+    }
+    &__title {
+        width: 37%;
+
+        @media(max-width: $breakpoint768) {
+            width: 40%;
+        }
+
+        & span {
+            font-weight: 400;
+            font-size: 20px;
+            color: #000;
+
+            @media(max-width: $breakpoint768) {
+                font-size: 14px;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 12px;
+            }
+            @media(max-width: $breakpoint375) {
+                font-weight: 600;
+            }
+        }
+    }
+    &__value {
+        width: 63%;
+
+        @media(max-width: $breakpoint768) {
+            width: 60%;
+        }
+        @media(max-width: $breakpoint375) {
+            width: 100%;
+        }
+
+        & span, & a {
+            font-weight: 400;
+            font-size: 20px;
+            color: #000;
+
+            @media(max-width: $breakpoint768) {
+                font-size: 14px;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 12px;
+            }
+        }
+    }
+}  
