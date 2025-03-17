@@ -19,6 +19,9 @@
         @media(max-width: $breakpoint768) {
             grid-template-columns: repeat(2, 1fr);
         }
+        @media(max-width: $breakpoint480) {
+            grid-template-columns: unset;
+        }
     }
     &__item {
         border-radius: $main-radius;

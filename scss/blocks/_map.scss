@@ -1,0 +1,70 @@
+.map {
+    position: relative;
+
+    &__top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 500px;
+
+        border-radius: 10px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+        background: #fff;
+        padding: 10px 16px;
+
+        @media(max-width: $breakpoint768) {
+            min-width: auto;
+        }
+
+        &:has(&-title:empty) {
+             display: none;
+        }
+
+        &-title {
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+        }
+    }
+    &__wrapper {
+        @media(max-width: $breakpoint768) {
+            overflow-x: scroll;
+        }
+    }
+    &__container {
+        @media(max-width: $breakpoint768) {
+            width: 736px;
+        }
+    }
+    &__svg {
+        overflow: visible;
+    }
+    &__point {
+        pointer-events: none;
+
+        &-icon {
+            fill: white !important;
+        }
+    }
+}
+
+.map-tab-link.active {
+    & > path  {
+        fill: #5267ac;
+    }
+}
+
+text {
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 0.01;
+
+    transform: translateX(10px);
+    font-weight: 600;
+    font-size: 12px;
+    text-align: justify;
+    color: #fff;
+}
+text.text-dark {
+    fill: #0a1d5a;
+}

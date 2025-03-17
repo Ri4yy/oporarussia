@@ -89,4 +89,57 @@ document.addEventListener('DOMContentLoaded', () => {
             leftMenuWrapper.classList.toggle('open')
         });
     }
+
+    const mapLinks = document.querySelectorAll('.map__svg a');
+
+    let okrug = {
+        center: 'Центральный федеральный округ',                    // 1
+        volga: 'Приволжский федеральный округ',                     // 2
+        northwestern: 'Северо-Западный федеральный округ',          // 3
+        ural: 'Уральский федеральный округ',                        // 4
+        fareastern: 'Дальневосточный федеральный округ',            // 5
+    };
+
+    mapLinks.forEach(el => {
+        el.addEventListener('mouseenter', (e) => {
+            let self = e.currentTarget;
+            let color = self.dataset.color;
+            let name = self.dataset.okrug;
+            
+            let nameOkrug = okrug[name];
+            document.querySelector('#map-title').textContent = nameOkrug;
+        
+            let mapPoint = self.querySelector('.map__point');
+            if (mapPoint) mapPoint.style.display = '';
+        
+            let currentPaths = self.querySelectorAll('path');
+            currentPaths.forEach(path => {
+                if (!path.closest('g')) {
+                    path.style.cssText = `fill: ${color}`;
+                }
+            });
+
+            mapLinks.forEach(item => {
+                if (item.getAttribute("data-okrug") === name) {
+                    item.classList.add("active");
+                }
+            });
+        });
+        el.addEventListener('mouseout', (e) => {
+            let self = e.currentTarget;
+            let name = self.dataset.okrug;
+
+            let mapPoint = self.querySelector('.map__point');
+            if (mapPoint) mapPoint.style.display = 'none';
+
+            let currentPath = self.querySelectorAll('path');
+            if(currentPath) currentPath.forEach(el => el.style.cssText=`fill: `);
+
+            mapLinks.forEach(item => {
+                if (item.getAttribute("data-okrug") === name) {
+                    item.classList.remove("active");
+                }
+            });
+        })
+    })  
 })

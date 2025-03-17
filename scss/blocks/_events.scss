@@ -103,20 +103,18 @@
     &__tabs {
         display: flex;
         overflow-x: auto;
+
+        &:has(&-item.active) &-item:first-child {
+            background-color: #d9d9d9;
+        }
         
         &-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
 
-            min-width: 141px;
-            height: 32px;
             background: #d9d9d9;
 
-            @media(max-width: $breakpoint768) {
-                min-width: 126px;
+            &.active {
+                background-color: $main-color;
             }
-
             &:first-child {
                 border-radius: 14px 0 0 14px;
                 background-color: $main-color;
@@ -127,14 +125,21 @@
             }
 
             &__link {
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
                 font-weight: 400;
                 font-size: 20px;
                 text-align: center;
                 color: #fff;
 
+                min-width: 141px;
+                height: 32px;
+
                 @media(max-width: $breakpoint768) {
                     font-size: 16px;
+                    min-width: 126px;
                 }
             }
         }

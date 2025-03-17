@@ -38,6 +38,10 @@
         cursor: pointer;
         z-index: 2;
 
+        @media(max-width: 1540px) {
+            display: none;
+        }
+
         & svg {
             & path {
                 &:nth-of-type(1) {
@@ -51,9 +55,17 @@
 
         &-prev {
             left: calc((100% - 1720px) / 2);
+
+            @media(max-width: 1740px) {
+                left: 40px;
+            }
         }
         &-next {
             right: calc((100% - 1720px) / 2);
+
+            @media(max-width: 1740px) {
+                right: 40px;
+            }
         }
     }
 
