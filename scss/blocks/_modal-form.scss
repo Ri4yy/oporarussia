@@ -1,0 +1,43 @@
+.modal-form {
+    $modal-width: 560px;
+    $modal-height: auto;
+
+    &__body {
+        height: $modal-height;
+        max-width: $modal-width;
+        width: 100%;
+
+        @media(max-width: calc($modal-width + 20px)) {
+            max-width: 98vw;
+        }
+        @media(max-width: $breakpoint768) {
+            width: 500px;
+        }
+    }
+    &__wrapper {
+        padding: 65px 50px 46px;
+        height: 100%;
+ 
+        @media(max-width: $breakpoint768) {
+            padding: 36px 50px;
+        }
+        @media(max-width: $breakpoint480) {
+            padding: 28px 24px;
+        }
+        @media(max-width: $breakpoint375) { 
+            padding: 36px 12px;
+        }
+    }
+    &__close {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 24px;
+    
+        @media(max-width: $breakpoint480) {
+            width: 12px;
+            top: 24px;
+            right: 24px;
+        }
+    }
+}

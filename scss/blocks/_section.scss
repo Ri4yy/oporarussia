@@ -41,7 +41,7 @@
 
     background-image: url(../assets/img/bg/bottom-bg.svg);
     background-repeat: no-repeat;
-    background-position: 50% 0;
+    background-position: bottom;
 
     @media(max-width: $breakpoint992) {
         padding: 50px 0 0 0;
@@ -80,6 +80,16 @@
     background-image: url(../assets/img/bg/error-bg.svg);
     background-repeat: no-repeat;
     background-position: 50% 80%;
+}
+
+.elementor-section {
+    padding: 50px 0;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    background-color: #00205B;
+
+    @media(max-width: $breakpoint768) {
+        padding: 30px 0;
+    }
 }
 
 .opora-contact-section {
